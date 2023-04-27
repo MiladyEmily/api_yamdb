@@ -1,23 +1,67 @@
-![YamDB](img/logo.png)
-# YaMDb
-![python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue) ![django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green) ![drf](https://img.shields.io/badge/django%20rest-ff1709?style=for-the-badge&logo=django&logoColor=white) ![jwt](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white)  
+# Описание проекта YaMDb_api
+
 YaMDb - сервис, позволяющий писать и читать отзывы на фильмы, книги, картины и т.д.
-## Как поднять у себя?
-```py
-# Клонируем репозиторий
-git clone https://github.com/gusevskiy/api_yamdb
-cd api_yamdb
-# Создаём виртуальное окружение (venv)
-python -m venv venv
-./venv/Scripts/Activate
-# Загружаем все нужные библитеки
+Этот репозиторий - API проекта YaMDb.
+
+### Технологии
+
+Python 3.7 | Django 3.2.16 | Django REST Framework 3.12.4 | Simple JWT 4.7.2
+
+### Как запустить проект
+
+Клонировать репозиторий и перейти в него в командной строке:
+
+```
+git clone https://github.com/MiladyEmily/api_final_yatube
+```
+
+```
+cd api_final_yatube
+```
+
+Cоздать и активировать виртуальное окружение:
+
+```
+python3 -m venv venv
+```
+
+* Если у вас Linux/macOS
+
+    ```
+    source venv/bin/activate
+    ```
+
+* Если у вас windows
+
+    ```
+    source venv/scripts/activate
+    ```
+
+```
+python -m pip install --upgrade pip
+```
+
+Установить зависимости из файла requirements.txt:
+
+```
 pip install -r requirements.txt
-# Выполняем миграции и запускаем проект
+```
+
+Выполнить миграции:
+
+```
 python manage.py migrate
+```
+
+Запустить проект:
+
+```
 python manage.py runserver
 ```
-## Как пользоваться?
-Этот репозиторий - бекенд проекта YaMDb, поэтому здесь есть API. Вот как можно зарегистрироваться и написать отзыв.
+
+### Как использовать
+
+Вот как можно зарегистрироваться и написать отзыв.
 1. Отправляем POST запрос на эндпоинт /auth/signup/, передавая почту и имя пользователя в тело запроса, например:
 ```json
 {
@@ -34,3 +78,9 @@ python manage.py runserver
 ```
 3. Получаем JWT токен, в заголовках следующих запросов добавляем `Authorization: Bearer ТОКЕН_ПОЛЬЗОВАТЕЛЯ` .
 4. Читаем документацию и спокойно пользуемся сервисом. :)
+
+### Авторы:
+
+- https://github.com/gusevskiy
+- https://github.com/MiladyEmily
+- https://github.com/timaaos
